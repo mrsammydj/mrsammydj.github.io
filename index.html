@@ -1,203 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio | Samuel Baxter</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://kit.fontawesome.com/7906588554.js" crossorigin="anonymous"></script>
-    </head>
-
-
-    <body>
-
-        
-        <!-- WEBSITE HEADER -->
-        <div id="header">
-            <div class="container">
-                <nav> <!--NAVIGATION LINKS BLOCK-->
-                    <ul id="sidemenu"> <!--List of links-->
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                </nav>
-                <div class="header-text">
-                    <h1>Hi, I'm <span>Sam!</span></h1>
-                    <p>Penn State Computer Science Student</p>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Samuel Baxter - Computer Science Student and Developer Portfolio">
+    <meta name="keywords" content="Samuel Baxter, Web Developer, Software Engineer, Computer Science, Portfolio">
+    <title>Samuel Baxter | Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Particle Background for Header -->
+    <div class="header-particles" id="particles-js"></div>
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Samuel<span>Baxter</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <header id="home">
+        <div class="header-bg"></div>
+        <div class="header-content">
+            <div class="profile-pic wow animate__animated animate__fadeIn">SB</div>
+            <h1 class="wow animate__animated animate__fadeInUp">Samuel Baxter</h1>
+            <p class="subtitle wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">Computer Science Student | Developer</p>
+            <div class="contact-info wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                <a href="mailto:sammydjbaxter@outlook.com"><i class="fas fa-envelope"></i> sammydjbaxter@outlook.com</a>
+                <a href="tel:4849480994"><i class="fas fa-phone"></i> (484) 948-0994</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> PA 19355</a>
+            </div>
+            <div class="header-cta wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                <a href="#projects" class="submit-btn">View My Work <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
-
-
-        <!-- ABOUT SECTION -->
-        <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-col-1">
-                        <img src="images/user.jpg">
+        <a href="#about" class="scroll-down">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </header>
+    
+    <section id="about" class="container">
+        <h2 class="section-title wow animate__animated animate__fadeInUp">About Me</h2>
+        <div class="about-content">
+            <div class="card wow animate__animated animate__fadeInLeft">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="about-col-2">
-                        <h1 class="sub-title">About Me!</h1>
-                        <p>My name is Sam Baxter, and I'm a current junior at Penn State studying Computer Science. I've grown 
-                            very passionate about software engineering and development as I have gotten older. Seeing technology
-                            grow all around me has been very inspiring, and I want to be part of this era where technology can 
-                            enhance our lives like it never has before. I've recently grown a special interest in utilizing public APIs
-                            to create little tools to make life a little easier. I would, however, love to breach into the realm of 
-                            VR/AR, as I think the applications of those are limitless.
-                        </p>
-
-                        <div class="tab-titles">
-                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                            <p class="tab-links" onclick="opentab('Experience')">Work Experience</p>
-                            <p p class="tab-links" onclick="opentab('Education')">Education</p>
-                        </div>
-
-                        <div class="tab-contents active-tab" id="Skills">
-                            <ul>
-                                <li><span>Software Programming Languages</span><br>Java<br>JavaScript<br>Python<br>SQL<br>C</li>
-                                <li><span>Hardware Description Languages</span><br>Verilog<br>VHDL<br></li>
-                                <li><span>UI/UX</span><br>HTML/CSS</li>
-                                <li><span>Tools/IDEs</span><br>Visual Studio Code<br>IntelliJ<br>Microsoft Suite<br>MySQL<br>Vivado</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="Experience">
-                            <ul>
-                                <li><span>Home Depot</span><br>Sales Associate (2021 - 2022)</li>
-                                <li><span>Sherwin Williams</span><br>Sales Associate (2023 - Present)</li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-contents" id="Education">
-                            <ul>
-                                <li><span>High School</span><br>Great Valley High School</li>
-                                <li><span>University</span><br>Penn State<br>BS in Computer Science<br>Expected Gradutaion Date: May 2025</li>
-                            </ul>
-                        </div>
-                        
-                    </div>
+                    <h3 class="card-title">Education</h3>
+                </div>
+                <div class="education-item">
+                    <p class="university">The Pennsylvania State University</p>
+                    <p class="degree">B.S. in Computer Science (Anticipated May 2025)</p>
+                    <p class="courses"><strong>Relevant Coursework:</strong> Data Structures and Algorithms, Computer Architecture, Operating Systems, Statistical Analysis, Database Management Systems, Python, Java</p>
                 </div>
             </div>
-        </div>
-
-
-        <!-- PORTFOLIO SECTION -->
-        <div id="portfolio">
-            <div class="container">
-                <h1 class="sub-title">Some of my Work...</h1>
-                <div class="work-list">
-                    <div class="work">
-                        <img src="images/work-1.png">
-                        <div class="layer">
-                            <h3>Weather App</h3>
-                            <p>A simple weather app that utilizes OpenWeatherMap's API, built with HTML/CSS/JS
-                            </p>
-                            <a href="https://github.com/mrsammydj/WeatherApp" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="work">
-                        <img src="images/work-2.png">
-                        <div class="layer">
-                            <h3>Scrabble Game</h3>
-                            <p>Collaborative Scrabble project using WordsAPIClient, built with Java and Swing
-                            </p>
-                            <a href="https://github.com/sourajitk/cmpsc-221" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="btn">See more</a>
-            </div>
-        </div>
-
-
-        <!-- CONTACT SECTION -->
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="sub-title">Get in Contact With Me!</h1>
-                        <p><i class="fa-solid fa-paper-plane"></i>sammydjbaxter@outlook.com</p>
-                        <div class="social-icons">
-                            <a href="https://linkedin.com/in/samuel-baxter-7a72a8226" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://github.com/mrsammydj" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-                        </div>
-                        <a href="images/Samuel Baxter Resume.pdf" download class="btn btn2">Download Resume</a>
-                    </div>
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="text" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Write Your Message Here!"></textarea>
-                            <button type="submit" class="btn btn2">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Copyright © Samuel Baxter</p>
-            </div>
-        </div>
-
-
-
-
-        <!-- Scipt for tabbing in about me section -->
-        <script>
-
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
             
-            function opentab(tabname){
-                for(tablink of tablinks){
-                    tablink.classList.remove("active-link");
-                }
-
-                for(tabcontent of tabcontents){
-                    tabcontent.classList.remove("active-tab");
-                }
-
-                event.currentTarget.classList.add("active-link");
-                document.getElementById(tabname).classList.add("active-tab");
-            }
-
-        </script>
-
-
-        <script>
+            <div class="card wow animate__animated animate__fadeInRight">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="card-title">Technical Skills</h3>
+                </div>
+                <div class="skill-categories">
+                    <div class="skill-category">
+                        <h4>Frontend Development</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">Next.js</span>
+                            <span class="skill-tag">Tailwind CSS</span>
+                            <span class="skill-tag">Framer Motion</span>
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Chart.js</span>
+                            <span class="skill-tag">Three.js</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Backend Development</h4>
+                        <div class="skill-list">
+                            <span class="skill-tag">Python (Flask)</span>
+                            <span class="skill-tag">RESTful API</span>
+                            <span class="skill-tag">JWT Authentication</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">API Integration</span>
+                            <span class="skill-tag">OAuth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience" class="container">
+        <h2 class="section-title wow animate__animated animate__fadeInUp">Work Experience</h2>
+        <div class="experience-item wow animate__animated animate__fadeInUp">
+            <div class="exp-header">
+                <p class="company">Lavner Education</p>
+                <p class="exp-date">June 2024 - August 2024</p>
+            </div>
+            <p class="position">Tech Instructor/IT Intern</p>
+            <div class="exp-details">
+                <ul>
+                    <li>Led technology-focused camps, teaching programming languages like Python and C++</li>
+                    <li>Educated students on game development principles and best practices</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="container">
+        <h2 class="section-title wow animate__animated animate__fadeInUp">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card wow animate__animated animate__fadeInUp">
+                <div class="project-img">
+                    <i class="fab fa-spotify"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Musilyze - Spotify Analytics Dashboard</h3>
+                    <p class="project-description">Developed a full-stack web application that leverages the Spotify API to provide deep insights into user listening habits.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Tailwind CSS</span>
+                        <span>Flask</span>
+                        <span>SQLite</span>
+                        <span>Chart.js</span>
+                    </div>
+                    <div class="project-details">
+                        • Built responsive frontend with animated visualizations of user data<br>
+                        • Implemented Flask backend with SQLite database, JWT authentication, and RESTful API endpoints<br>
+                        • Created data visualization with Chart.js and machine learning analysis<br>
+                        • Deployed using Railway and Vercel with CI/CD pipelines
+                    </div>
+                    <div class="project-links">
+                        <a href="https://musilyze.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
             
-            var sidemenu = document.getElementById("sidemenu")
-
-
-            function openmenu(){
-                sidemenu.style.right = "0";
-            }
-
-            function closemenu(){
-                sidemenu.style.right = "-200px";
-            }
-
-        </script>
-
-
-        <script>
-            const scriptURL = '<https://script.google.com/macros/s/AKfycbzTHeOn1-CfPwRxloVXGffQ0M9HVBVMKh2n2rlXTq-JzZgaHg96WB8nN_3AVAm8qXOm/exec>'
-            const form = document.forms['submit-to-google-sheet']
-        
-            form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
-                .catch(error => console.error('Error!', error.message))
-            })
-        </script>
-
-    </body>
-
-
-
+            <div class="project-card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <div class="project-img">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Solar System Visualization Web Application</h3>
+                    <p class="project-description">Led a team of 5 to design an orrery for NASA's 2024 Space Apps Challenge Hackathon.</p>
+                    <div class="project-tech">
+                        <span>Next.js</span>
+                        <span>Three.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>NASA API</span>
+                    </div>
+                    <div class="project-details">
+                        • Implemented dynamic space exploration tool with real-time celestial body simulations<br>
+                        • Integrated NASA data sources for accurate astronomical information<br>
+                        • Incorporated gamification elements to enhance user engagement and space education
+                    </div>
+                    <div class="project-links">
+                        <a href="https://nasa-hackathon-2024-two.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="container">
+        <h2 class="section-title wow animate__animated animate__fadeInUp">Get In Touch</h2>
+        <div class="contact-section wow animate__animated animate__fadeInUp">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Email</p>
+                            <p class="contact-value"><a href="mailto:sammydjbaxter@outlook.com">sammydjbaxter@outlook.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">Phone</p>
+                            <p class="contact-value"><a href="tel:4849480994">(484) 948-0994</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">GitHub</p>
+                            <p class="contact-value"><a href="#" target="_blank">github.com/samuelbaxter</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <p class="contact-label">LinkedIn</p>
+                            <p class="contact-value"><a href="#" target="_blank">linkedin.com/in/samuel-baxter</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Enter your name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-input" placeholder="Enter your message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">Samuel<span>Baxter</span></a>
+            <p class="footer-tagline">Computer Science Student & Developer</p>
+            
+            <div class="social-links">
+                <a href="#" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:sammydjbaxter@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <div class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="assets/samuel-baxter-resume.pdf" target="_blank">Resume</a>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Samuel Baxter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- Theme switch button -->
+    <div class="theme-switch" id="themeSwitch">
+        <i class="fas fa-moon"></i>
+    </div>
+    
+    <!-- WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/particles-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
